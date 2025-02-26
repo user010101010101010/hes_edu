@@ -1,6 +1,240 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-body {
-    background-color: aquamarine;
+section {
+  position: relative;
 }
+h1 {
+    font-family: 'HelveticaNeue';
+    font-size: 10.417vw;
+    font-weight: 500;
+}
+h2 {
+    font-family: 'HelveticaNeue';
+    font-size: 3.906vw;
+    font-weight: 400;
+}
+.foreground {
+  width: 100%;
+  /* height: 100%; */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  /* gap: 0.1vw; */
+  /* background-color: #0437ff; */
+}
+.block1 {
+  width: 6.25vw;
+  height: 6.25vw;
+  background-color: #fff;
+  border: 0.052vw solid #0437ff;
+}
+.blue {
+  background-color: #4f73ff;
+}
+.blue:hover {
+  background-color: #0437ff;
+  transition: all 0.3s ease;
+}
+/* -------------------------------section 1--------------------------------- */
+
+.section1 {
+  height: 62.5vw;
+}
+.section1 h1 {
+    position: absolute;
+    top: 8.5vw;
+    left: 7.19vw;
+}
+.university {
+    font-family: 'HelveticaNeue';
+    font-size: 5.469vw;
+    font-weight: 400;
+    position: absolute;
+    top: 32.3vw;
+    left: 8.4vw;
+}
+.forhorses {
+    font-family: 'HelveticaNeue';
+    font-size: 5.469vw;
+    font-weight: 400;
+    position: absolute;
+    top: 38.1vw;
+    left: 18.9vw;
+}
+
+/* -------------------------------section 2--------------------------------- */
+
+.section2 {
+    height: 68.5vw;
+}
+.section2 h2 {
+    position: absolute;
+    top: 57.8vw;
+    left: 58.7vw;
+    right: 9vw;
+}
+.interactive-map {
+    width: 85.469vw;
+    height: 47.969vw;
+    position: relative;
+    top: 7.292vw;
+    left: 7.292vw;
+    display: flex;
+}
+.map {
+    display: flex;
+    height: 47.969vw;
+    width: 41.719vw;
+    background-color: #fff;
+    border: 0.052vw solid #0437ff;
+}
+.room {
+    height: 47.969vw;
+    width: 43.75vw;
+}
+.room-blok {
+    border: 0.365vw solid #000000;
+    cursor: help;
+}
+.A {
+    width: 16.042vw;
+    height: 8.75vw;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.B {
+    width: 7.76vw;
+    height: 18.906vw;
+    position: relative;
+    top: 0.521vw;
+}
+.C {
+    width: 9.531vw;
+    height: 24.479vw;
+    position: relative;
+    top: -27.68vw;
+    left: 21.6vw;
+}
+.D {
+    width: 12.5vw;
+    height: 12.5vw;
+    position: relative;
+    left: 18.67vw;
+    top: -27.13vw;
+}
+.E {
+    width: 18.229vw;
+    height: 8.958vw;
+    position: relative;
+    top: -36.1vw;
+}
+.p {
+    text-align: center;
+    font-family: 'HelveticaNeue';
+    font-size: 2.604vw;
+    font-weight: 500;
+}
+.map-center {
+    width: 31.25vw;
+    height: 37.552vw;
+    position: relative;
+    margin: 5.208vw;
+}
+/* .hall img {
+    width: 12.865vw;
+    height: 28.021vw;
+}   
+.hall {
+    position: relative;
+    top: 10vw;
+    left: 10vw;
+    width: 12.865vw;
+    height: 28.021vw;
+} */
+.room-blok:hover {
+    background-color: #FE5001;
+    transition: all 0.5s ease;
+}
+.roomimg {
+    width: 31.25vw;
+    height: 38.698vw;
+    position: absolute;
+    top: 4vw;
+    left: 49vw;
+    display: none;
+}
+.roomimg.visible {
+    display: block;
+}
+.example {
+    width: 5vw;
+    height: 5vw;
+    background-color: #000000;
+}
+/* -------------------------------section 3--------------------------------- */
+
+.section3 h2 {
+    position: absolute;
+    top: 8vw;
+    left: 9.4vw;
+}
+.canvas-item-1 {
+    font-family: 'HelveticaNeue';
+    font-size: 2.604vw;
+    font-weight: 400;
+    position: absolute;
+    top: 8.4vw;
+    left: 82.9vw;
+    cursor: pointer;
+}
+.canvas-item-2 {
+    font-family: 'HelveticaNeue';
+    font-size: 2.604vw;
+    font-weight: 400;
+    position: absolute;
+    top: 39.6vw;
+    left: 83.2vw;
+    cursor: pointer;
+}
+canvas {
+    background-color: #fff;
+    border: 0.365vw solid #4f73ff;
+    width: 57.083vw;
+    height: 31.25vw;
+    position: absolute;
+    top: 15.625vw;
+    left: 8.854vw;
+    cursor: crosshair;
+}
+.arrow img {
+    width: 2.394vw;
+    height: 2.394vw;
+    position: absolute;
+    left: 76.875vw;
+    top: 14.5vw;
+}
+.brush {
+    border-radius: 100%;
+    background-color: #000000;
+    position: absolute;
+    left: 78.15vw;
+    top: 46.9vw;
+    transform-origin: center;
+    transition: width 0.3s, height 0.3s;
+    transform: translate(-50%, -50%);
+}
+
+/* -------------------------------section 4--------------------------------- */
+
