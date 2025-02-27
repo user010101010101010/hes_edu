@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // -------------------------------section 2---------------------------------
     
-    const roomBlock = document.querySelector('.example');
-    const roomImg = document.querySelector('.roomimg');
+    // const roomBlock = document.querySelector('.example');
+    // const roomImg = document.querySelector('.roomimg');
 
-    roomBlock.addEventListener('click', function() {
-        roomImg.classList.toggle('visible');
-    });
+    // roomBlock.addEventListener('click', function() {
+    //     roomImg.classList.toggle('visible');
+    // });
 
     // -------------------------------section 3---------------------------------
 
