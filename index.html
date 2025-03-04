@@ -361,28 +361,97 @@
             <div class="interactive-map">
                 <div class="map">
                     <div class="map-center">
-                        <div class="korpus A">
+                        <div class="korpus A" id="korpusa">
                             <p>A</p>
                         </div>
-                        <div class="korpus B">
+                        <div class="korpus B" id="korpusb">
                             <p>B</p>
                         </div>
-                        <div class="korpus C">
+                        <div class="korpus C" id="korpusc">
                             <p>C</p>
                         </div>
                         <div class="hall">
                             <p class="hall-text">ХОЛЛ</p>
                         </div>
-                        <div class="korpus D">
+                        <div class="korpus D" id="korpusd">
                             <p>D</p>
                         </div>
-                        <div class="korpus E">
+                        <div class="korpus E" id="korpuse">
                             <p>E</p>
                         </div>
                     </div>
                 </div>
                 <div class="room">
-                    <div class="clickme">КЛИКНИ НА АУДИТОРИЮ, ЧТОБЫ ПОСМОТРЕТЬ РАСПИСАНИЕ</div>
+                    <div class="roomA show" id="rooma">
+                        <p class="room-h1 A-title">A</p>
+                        <p class="room-text A-subjects">ПРЕДМЕТЫ:</p>
+                        <p class="room-text A-time">:ВРЕМЯ</p>
+                        <img src="images/Mechanics-logo.svg" class="Mechanics-logo">
+                        <p class="room-text A-sub1">Копытная механика –––––––––––</p>
+                        <img src="images/Mindspeed-logo.svg" class="Mindspeed-logo">
+                        <p class="room-text A-sub2">Скорость разума –––––––––––––</p>
+                        <p class="room-text A-time1">15:00-17:00</p>
+                        <p class="room-text A-time2">17:30-19:30</p>
+                        <img src="images/scheme-A.svg" class="scheme-A">
+                        <p class="room-text A-technicheskaya">Техническая</p>
+                        <p class="room-text A-laba">Лабораторная</p>
+                        <p class="room-text A-sklad">Склад</p>
+                    </div>
+                    <div class="roomB show" id="roomb">
+                        <p class="room-h1 B-title">B</p>
+                        <p class="room-text B-subjects">ПРЕДМЕТЫ:</p>
+                        <p class="room-text B-time">:ВРЕМЯ</p>
+                        <img src="images/Mechanics-logo.svg" class="Mechanics-logo-1">
+                        <p class="room-text B-sub1">Копытная механика ––––––</p>
+                        <p class="room-text B-time1">12:30-14:30 (1гр.)
+                        17:30-19:30 (2гр.)</p>
+                        <img src="images/Iskusstvo.svg" class="Iskusstvo-logo">
+                        <p class="room-text B-sub2">Искусство грации –––––––</p>
+                        <p class="room-text B-time2">10:00-12:00 (1 гр.)
+                        15:00-17:00 (2 гр.)</p>
+                        <img src="images/scheme-B.svg" class="scheme-B">
+                        <p class="room-text B-semi">Семинарская</p>
+                        <p class="room-text B-prac">Практическая</p>
+
+                    </div>
+                    <div class="roomC show" id="roomc">
+                        <p class="room-h1 C-title">C</p>
+                        <p class="room-text C-cowork"><span class="gap-red">(</span> ЛОШАДИНЫЙ КОВОРКИНГ <span class="gap-red">)</span></p>
+                        <p class="room-text C-maintext-1">Основная комната: пространство в стиле лофт с удобными диванами и столами</p>
+                        <p class="room-text C-maintext-2">Дополнительные комнаты: небольшие комнаты, уголок с гамаками и настольными играми</p>
+                        <img src="images/scheme-C.svg" class="scheme-C">
+                        <p class="room-text C-chill-1">Чил зона</p>
+                        <p class="room-text C-cowork-text">Коворкинг</p>
+                        <p class="room-text C-chill-2">Чил зона</p>
+                    </div>
+                    <div class="roomD show" id="roomd">
+                        <p class="room-h1 D-title">D</p>
+                        <p class="room-text D-subjects">ПРЕДМЕТЫ:</p>
+                        <img src="images/Health-logo.svg" class="Health-logo">
+                        <p class="room-text D-sub1">Здоровье табуна –– 11:30-13:30</p>
+                        <img src="images/Mechanics-logo.svg" class="Mechanics-logo-2">
+                        <p class="room-text D-sub2">Копытная механика –– 21:00-23:00</p>
+                        <img src="images/Management-logo.svg" class="Management-logo">
+                        <p class="room-text D-sub3">Менеджмент копыт –– 19:00-21:00</p>
+                        <img src="images/scheme-D.svg" class="scheme-D">
+                        <p class="room-text D-relax">Зона медитации</p>
+                        <p class="room-text D-magic">Комната заклинаний</p>
+                    </div>
+                    <div class="roomE show" id="roome">
+                        <p class="room-h1 E-title">E</p>
+                        <p class="room-text E-subjects">ПРЕДМЕТЫ:</p>
+                        <img src="images/Health-logo.svg" class="Health-logo-1">
+                        <p class="room-text E-sub1">Здоровье табуна –– 11:30-13:30</p>
+                        <img src="images/Security.svg" class="Security-logo">
+                        <p class="room-text E-sub2">Безопасность –– 14:00-16:00</p>
+                        <img src="images/Skachki-logo.svg" class="Skachki-logo">
+                        <p class="room-text E-sub3">Азы скачек –– 16:30-18:30</p>
+                        <img src="images/Management-logo.svg" class="Management-logo-1">
+                        <p class="room-text E-sub4">Менеджмент копыт –– 19:00-21:00</p>
+                        <img src="images/scheme-E.svg" class="scheme-E">
+                        <p class="room-text E-zal">Лекционный зал</p>
+                    </div>
+                    <div id="clickme" class="clickme">КЛИКНИ НА АУДИТОРИЮ, ЧТОБЫ ПОСМОТРЕТЬ РАСПИСАНИЕ</div>
                 </div>    
             </div>
         </div>
@@ -547,6 +616,27 @@
     </section>
     <section class="section4">
         <div class="foreground">
+            <!-- <div class="empty-book"></div>
+            <div class="academy-book">
+                <p>Академия</p>
+                <div class="ellipse"></div>
+                <p class="book-sign-1">hes</p>
+            </div>
+            <div class="grivastikus-book">
+                <p class="grivastikus-book-h1">Гривастикус</p>
+                <p>специальное издание 30 летие создания день лошади</p>
+                <p class="book-sign-2">hes</p>
+            </div>
+            <div class="kafedra-book">
+                <p class="kafedra-book-h1">6</p>
+                <p>От стойла до кафедры</p>
+                <p class="book-sign-3">hes</p>
+            </div>
+            <div class="ippo-book">
+                <p>Иппо-интеллект</p>
+                <p class="book-sign-4">hes</p>
+                <img src="images/Star 5.svg" class="stars">
+            </div> -->
             <div class="razvorot-container">
                 <p>ПЕРЕТАЩИ СЮДА</p>
             </div>

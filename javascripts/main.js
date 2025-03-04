@@ -2,12 +2,120 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // -------------------------------section 2---------------------------------
     
-    // const roomBlock = document.querySelector('.example');
-    // const roomImg = document.querySelector('.roomimg');
+    const korpusa = document.getElementById('korpusa');
+    const korpusb = document.getElementById('korpusb');
+    const korpusc = document.getElementById('korpusc');
+    const korpusd = document.getElementById('korpusd');
+    const korpuse = document.getElementById('korpuse');
+    const rooma = document.getElementById('rooma');
+    const roomb = document.getElementById('roomb');
+    const roomc = document.getElementById('roomc');
+    const roomd = document.getElementById('roomd');
+    const roome = document.getElementById('roome');
+    const clickme = document.getElementById('clickme');
 
-    // roomBlock.addEventListener('click', function() {
-    //     roomImg.classList.toggle('visible');
-    // });
+    rooma.style.opacity = '0';
+    rooma.style.visibility = 'hidden';
+    roomb.style.opacity = '0';
+    roomb.style.visibility = 'hidden';
+    roomc.style.opacity = '0';
+    roomc.style.visibility = 'hidden';
+    roomd.style.opacity = '0';
+    roomd.style.visibility = 'hidden';
+    roome.style.opacity = '0';
+    roome.style.visibility = 'hidden';
+    clickme.style.opacity = '1';
+    clickme.style.visibility = 'visible';
+
+    function hideAllExcept(exceptElement) {
+        const elements = [rooma, roomb, roomc, roomd, roome, clickme];
+        // forEach используется для перебора массива элементов и скрытия всех элементов, кроме указанного
+        elements.forEach(element => { 
+            if (element !== exceptElement) {
+                element.style.opacity = '0';
+                element.style.visibility = 'hidden';
+            }
+        });
+    }
+
+    function isElementVisible(element) {
+    return element.style.opacity === '1' && element.style.visibility === 'visible';
+    }
+
+    korpusa.addEventListener('click', () => {
+        if (isElementVisible(rooma)) {
+            rooma.style.opacity = '0';
+            rooma.style.visibility = 'hidden';
+            clickme.style.opacity = '1';
+            clickme.style.visibility = 'visible';
+        } else {
+            hideAllExcept(rooma);
+            rooma.style.opacity = '1';
+            rooma.style.visibility = 'visible';
+            clickme.style.opacity = '0';
+            clickme.style.visibility = 'hidden';
+        }
+    });
+
+    korpusb.addEventListener('click', () => {
+        if (isElementVisible(roomb)) {
+            roomb.style.opacity = '0';
+            roomb.style.visibility = 'hidden';
+            clickme.style.opacity = '1';
+            clickme.style.visibility = 'visible';
+        } else {
+            hideAllExcept(roomb);
+            roomb.style.opacity = '1';
+            roomb.style.visibility = 'visible';
+            clickme.style.opacity = '0';
+            clickme.style.visibility = 'hidden';
+        }
+    });
+
+        korpusc.addEventListener('click', () => {
+        if (isElementVisible(roomc)) {
+            roomc.style.opacity = '0';
+            roomc.style.visibility = 'hidden';
+            clickme.style.opacity = '1';
+            clickme.style.visibility = 'visible';
+        } else {
+            hideAllExcept(roomc);
+            roomc.style.opacity = '1';
+            roomc.style.visibility = 'visible';
+            clickme.style.opacity = '0';
+            clickme.style.visibility = 'hidden';
+        }
+    });
+
+        korpusd.addEventListener('click', () => {
+        if (isElementVisible(roomd)) {
+            roomd.style.opacity = '0';
+            roomd.style.visibility = 'hidden';
+            clickme.style.opacity = '1';
+            clickme.style.visibility = 'visible';
+        } else {
+            hideAllExcept(roomd);
+            roomd.style.opacity = '1';
+            roomd.style.visibility = 'visible';
+            clickme.style.opacity = '0';
+            clickme.style.visibility = 'hidden';
+        }
+    });
+
+        korpuse.addEventListener('click', () => {
+        if (isElementVisible(roome)) {
+            roome.style.opacity = '0';
+            roome.style.visibility = 'hidden';
+            clickme.style.opacity = '1';
+            clickme.style.visibility = 'visible';
+        } else {
+            hideAllExcept(roome);
+            roome.style.opacity = '1';
+            roome.style.visibility = 'visible';
+            clickme.style.opacity = '0';
+            clickme.style.visibility = 'hidden';
+        }
+    });
 
     // -------------------------------section 3---------------------------------
 

@@ -176,6 +176,383 @@ h2 {
     left: 54.5vw;
     top: 22.6vw;
 }
+.show {
+    width: 31.198vw;
+    height: 37.448vw;
+    position: absolute;
+    left: 48.95vw;
+    top: 5.26vw;
+}
+.room-h1 {
+    font-family: 'HelveticaNeue';
+    font-size: 5.208vw;
+    font-weight: 400;
+}
+.room-text {
+    font-family: 'HelveticaNeue';
+    font-size: 1.302vw;
+    font-weight: 400;
+}
+.roomA {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.A-title {
+    position: absolute;
+    left: 13.906vw;
+    top: -0.2vw;
+}
+.A-subjects {
+    position: absolute;
+    top: 6.3vw;
+}
+.A-time {
+    position: absolute;
+    left: 26.25vw;
+    top: 6.3vw;
+}
+.Mechanics-logo {
+    width: 2.764vw;
+    height: 2.886vw;
+    position: absolute;
+    top: 9.5vw;
+    left: 0.1vw;
+}
+.A-sub1 {
+    position: absolute;
+    left: 3.802vw;
+    top: 10.4vw;
+}
+.Mindspeed-logo {
+    width: 2.813vw;
+    height: 2.599vw;
+    position: absolute;
+    top: 16vw;
+    left: 0.1vw;
+}
+.A-sub2 {
+    position: absolute;
+    left: 3.802vw;
+    top: 16.85vw;
+}
+.A-time1 {
+    position: absolute;
+    left: 24.167vw;
+    top: 10.4vw;
+}
+.A-time2 {
+    position: absolute;
+    top: 16.85vw;
+    left: 24.167vw;
+}
+.scheme-A {
+    width: 31.198vw;
+    height: 15.625vw;
+    position: absolute;
+    top: 21.823vw;
+}
+.A-technicheskaya {
+    position: absolute;
+    left: 1.563vw;
+    top: 23.9vw;
+}
+.A-laba {
+    position: absolute;
+    left: 16.146vw;
+    top: 29vw;
+}
+.A-sklad {
+    position: absolute;
+    left: 3.542vw;
+    top: 33vw;
+}
+.roomB {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.B-title {
+    position: absolute;
+    left: 13.906vw;
+    top: -0.2vw;
+}
+.B-subjects {
+    position: absolute;
+    top: 6.3vw;
+}
+.B-time {
+    position: absolute;
+    left: 26.25vw;
+    top: 6.3vw;
+}
+.Mechanics-logo-1 {
+    width: 2.764vw;
+    height: 2.886vw;
+    position: absolute;
+    top: 9.5vw;
+    left: 0.1vw;
+}
+.B-sub1 {
+    position: absolute;
+    left: 3.802vw;
+    top: 10.4vw;
+}
+.B-time1 {
+    position: absolute;
+    width: 10.469vw;
+    left: 20.781vw;
+    top: 9.9vw;
+}
+.Iskusstvo-logo {
+    width: 2.813vw;
+    height: 2.813vw;
+    position: absolute;
+    top: 15.8vw;
+    left: 0.1vw;
+}
+.B-sub2 {
+    position: absolute;
+    left: 3.802vw;
+    top: 16.7vw;
+}
+.B-time2 {
+    position: absolute;
+    width: 10.833vw;
+    left: 20.417vw;
+    top: 16.2vw;
+}
+.B-semi {
+    position: absolute;
+    left: 4.219vw;
+    top: 29.1vw;
+}
+.B-prac {
+    position: absolute;
+    top: 29.1vw;
+    left: 19.479vw;
+}
+.scheme-B {
+    width: 31.198vw;
+    height: 15.625vw;
+    position: absolute;
+    top: 21.823vw;
+}
+.roomC {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.C-title {
+    position: absolute;
+    left: 13.906vw;
+    top: -0.1vw;
+}
+.C-cowork {
+    position: absolute;
+    left: 5.938vw;
+    top: 8.4vw;
+}
+.gap-red {
+    color: #FE5001;
+}
+.C-maintext-1 {
+    position: absolute;
+    width: 29.063vw;
+    top: 12.54vw;
+    left: 0.07vw;
+}
+.C-maintext-2 {
+    position: absolute;
+    width: 29.74vw;
+    top: 18.8vw;
+    left: 0.1vw;
+}
+.scheme-C {
+    width: 31.198vw;
+    height: 12.448vw;
+    position: absolute;
+    top: 24.97vw;
+    left: 0.05vw;
+}
+.C-chill-1 {
+    position: absolute;
+    left: 3.073vw;
+    top: 30vw;
+    width: 2.865vw;
+}
+.C-chill-2 {
+    position: absolute;
+    left: 25.469vw;
+    top: 30vw;
+    width: 2.865vw;
+}
+.C-cowork-text {
+    position: absolute;
+    left: 12.292vw;
+    top: 30.7vw;
+}
+.roomD {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.D-title {
+    position: absolute;
+    top: -0.1vw;
+    left: -0.3vw;
+}
+.D-subjects {
+    position: absolute;
+    top: 11.4vw;
+}
+.Health-logo {
+    position: absolute;
+    height: 2.353vw;
+    width: 2.449vw;
+    top: 16.3vw;
+    left: 0.1vw;
+}
+.D-sub1 {
+    position: absolute;
+    width: 8.698vw;
+    left: 3.75vw;
+    top: 16.2vw;
+}
+.Mechanics-logo-2 {
+    position: absolute;
+    width: 2.929vw;
+    height: 3.062vw;
+    top: 21.8vw;
+    left: 0.1vw;
+}
+.D-sub2 {
+    position: absolute;
+    width: 8.698vw;
+    top: 22.45vw;
+    left: 3.75vw;
+}
+.Management-logo {
+    position: absolute;
+    width: 1.894vw;
+    height: 2.821vw;
+    top: 28.3vw;
+    left: 0.1vw;
+}
+.D-sub3 {
+    position: absolute;
+    top: 28.7vw;
+    left: 3.75vw;
+    width: 8.698vw;
+}
+.scheme-D {
+    width: 15.625vw;
+    height: 29.01vw;
+    position: absolute;
+    top: 8.438vw;
+    left: 15.573vw;
+}
+.D-relax {
+    width: 6.615vw;
+    position: absolute;
+    top: 14.6vw;
+    left: 19.948vw;
+    display: flex;
+    text-align: center;
+}
+.D-magic {
+    position: absolute;
+    width: 7.187vw;
+    top: 29vw;
+    left: 19.792vw;
+    display: flex;
+    text-align: center;
+}
+.roomE {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.E-title {
+    position: absolute;
+    top: -0.1vw;
+    left: -0.3vw;
+}
+.E-subjects {
+    position: absolute;
+    top: 11.4vw;
+}
+.Health-logo-1 {
+    position: absolute;
+    height: 2.353vw;
+    width: 2.449vw;
+    top: 16.3vw;
+    left: 0.1vw;
+}
+.E-sub1 {
+    position: absolute;
+    width: 10.521vw;
+    left: 3.281vw;
+    top: 16.3vw;
+}
+.Security-logo {
+    width: 2.448vw;
+    height: 2.448vw;
+    position: absolute;
+    top: 22.4vw;
+    left: 0.1vw;
+}
+.E-sub2 {
+    position: absolute;
+    width: 8.698vw;
+    top: 22.5vw;
+    left: 3.281vw;
+}
+.Skachki-logo {
+    position: absolute;
+    width: 2.5vw;
+    height: 2.5vw;
+    top: 28.6vw;
+    left: 0.1vw;
+}
+.E-sub3 {
+    position: absolute;
+    width: 8.698vw;
+    top: 28.7vw;
+    left: 3.281vw;
+}
+.Management-logo-1 {
+    position: absolute;
+    width: 1.894vw;
+    height: 2.821vw;
+    top: 34.531vw;
+    left: 0.4vw;
+}
+.E-sub4 {
+    position: absolute;
+    width: 12.031vw;
+    top: 35vw;
+    left: 3.281vw;
+}
+.scheme-E {
+    left: 18.75vw;
+    position: absolute;
+    width: 12.448vw;
+    height: 37.448vw;
+}
+.E-zal {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    width: 7.656vw;
+    top: 17.5vw;
+    left: 21.198vw;
+}
 
 /* -------------------------------section 3--------------------------------- */
 
@@ -251,6 +628,38 @@ canvas {
     font-family: 'HelveticaNeue';
     font-size: 2.083vw;
     font-weight: 400;
+}
+.empty-book {
+    background-color: #fff;
+    width: 2.604vw;
+    height: 32.524vw;
+    position: absolute;
+    left: 6.563vw;
+    top: 23.698vw;
+    transform: rotate(3deg);
+}
+.academy-book {
+    background-color: #fff;
+    width: 8.385vw;
+    height: 41.823vw;
+    position: absolute;
+    left: 11.198vw;
+    top: 14.375vw;
+}
+.grivastikus-book {
+    background-color: #fff;
+    width: 5.677vw;
+    height: 49.948vw;
+    position: absolute;
+    left: 20.417vw;
+    top: 6.25vw;
+}
+.kafedra-book {
+    background-color: #fff;
+    position: absolute;
+    width: 11.927vw;
+    height: 24.948vw;
+    
 }
 
 /* -------------------------------footer----------------------------------------- */
