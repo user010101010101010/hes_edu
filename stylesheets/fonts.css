@@ -10,3 +10,39 @@
     font-style: normal;
     font-weight: 400;
 }
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url(../fonts/HelveticaNeueLight.otf) format('opentype');
+    font-style: light;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Playfair Display Bold';
+    src: url(../fonts/ofont.ru_Playfair\ Display.ttf) format('truetype');
+    font-style: bold;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Arial Black';
+    src: url(../fonts/arial_black.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Arial';
+    src: url(../fonts/ofont.ru_Arial.ttf) format('truetype');
+    font-style: italic;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url(../fonts/IBMPlexMono-SemiBold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url(../fonts/SourceSerifPro-SemiBold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 600;
+}

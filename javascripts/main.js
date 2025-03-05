@@ -195,5 +195,40 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // -------------------------------section 4---------------------------------
 
+        const draggable = document.querySelector('.grivastikus-book');
+        const dropzone = document.querySelector('.razvorot-container');
+        const image = dropzone.querySelector('.razvorot-grivastikus');
+
+        // Событие начала перетаскивания
+        draggable.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', 'drag'); // Устанавливаем данные для перетаскивания
+            draggable.classList.add('dragging'); // Добавляем класс для стилизации
+        });
+
+        // Событие окончания перетаскивания
+        draggable.addEventListener('dragend', () => {
+            draggable.classList.remove('dragging'); // Убираем класс
+        });
+
+        // Событие, когда объект находится над dropzone
+        dropzone.addEventListener('dragover', (e) => {
+            e.preventDefault(); // Разрешаем drop
+            dropzone.classList.add('dragover'); // Добавляем стиль для hover
+        });
+
+        // Событие, когда объект покидает dropzone
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.classList.remove('dragover'); // Убираем стиль hover
+        });
+
+        // Событие, когда объект отпущен в dropzone
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropzone.classList.remove('dragover'); // Убираем стиль hover
+
+            // Показываем картинку в контейнере
+            image.style.display = 'block';
+            draggable.style.display = 'none'; // Скрываем перетаскиваемый объект
+        });
 
  })

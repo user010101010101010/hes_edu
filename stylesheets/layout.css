@@ -620,21 +620,22 @@ canvas {
     position: absolute;
     left: 56.25vw;
     top: 18.75vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .razvorot-container p {
     font-family: 'HelveticaNeue';
     font-size: 2.083vw;
     font-weight: 400;
+    position: absolute;
+    left: 9.4vw;
+    top: 17.95vw;
+    z-index: -1;
 }
 .empty-book {
     background-color: #fff;
     width: 2.604vw;
     height: 32.524vw;
     position: absolute;
-    left: 6.563vw;
+    left: 7.4vw;
     top: 23.698vw;
     transform: rotate(3deg);
 }
@@ -645,6 +646,36 @@ canvas {
     position: absolute;
     left: 11.198vw;
     top: 14.375vw;
+    cursor: move;
+}
+.academy-book-h1 {
+    font-family: 'Playfair Display Bold';
+    font-weight: 500;
+    font-size: 5.208vw;
+    color: #0437ff;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 13.5vw;
+    left: -7.9vw;
+}
+.ellipse {
+    width: 2.604vw;
+    height: 2.604vw;
+    border-radius: 100%;
+    border: 0.26vw solid #0437ff;
+    position: absolute;
+    left: 2.76vw;
+    top: 30vw;
+}
+.book-sign-1 {
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+    font-size: 0.781vw;
+    color: #0437ff;
+    letter-spacing: 0.07vw;
+    position: absolute;
+    left: 3.49vw;
+    top: 39.583vw;
 }
 .grivastikus-book {
     background-color: #fff;
@@ -653,13 +684,132 @@ canvas {
     position: absolute;
     left: 20.417vw;
     top: 6.25vw;
+    display: flex;
+    cursor: move;
+}
+.grivastikus-book-h1 {
+    font-family: 'Arial Black';
+    font-weight: 400;
+    font-size: 2.865vw;
+    color: #0437ff;
+    transform: rotate(90deg);
+    position: absolute;
+    left: -8.9vw;
+    top: 12vw;
+}
+.grivastikus-book-text {
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.146vw;
+    color: #0437ff;
+    width: 14.688vw;
+    transform: rotate(90deg);
+    position: absolute;
+    left: -4.5vw;
+    top: 35vw;
+}
+.book-sign-2 {
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+    font-size: 0.781vw;
+    color: #0437ff;
+    letter-spacing: 0.07vw;
+    position: absolute;
+    left: 2.135vw;
+    top: 48.073vw;
 }
 .kafedra-book {
     background-color: #fff;
     position: absolute;
     width: 11.927vw;
     height: 24.948vw;
-    
+    top: 31.25vw;
+    left: 26.51vw;
+    cursor: move;
+}
+.kafedra-book-h1 {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14.063vw;
+    color: #000000;
+    position: absolute;
+    left: 1.6vw;
+}
+.kafedra-book-text {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.781vw;
+    color: #000000;
+    position: absolute;
+    width: 7.708vw;
+    text-align: center;
+    top: 14vw;
+    left: 2vw;
+}
+.book-sign-3 {
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+    font-size: 0.781vw;
+    color: #0437ff;
+    letter-spacing: 0.07vw;
+    position: absolute;
+    left: 5.26vw;
+    top: 23.073vw;
+}
+.ippo-book {
+    position: absolute;
+    background-color: #fff;
+    width: 3.447vw;
+    height: 31.368vw;
+    transform: rotate(-18deg);
+    left: 41.9vw;
+    top: 25.1vw;
+    cursor: move;
+}
+.ippo-book-h1 {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.563vw;
+    color: #0437ff;
+    position: absolute;
+    transform: rotate(89deg);
+    width: 16.771vw;
+    left: -6.7vw;
+    top: 15vw;
+}
+.book-sign-4 {
+    font-family: 'HelveticaNeue';
+    font-weight: 300;
+    font-size: 0.781vw;
+    color: #0437ff;
+    letter-spacing: 0.07vw;
+    position: absolute;
+    transform: rotate(89deg);
+    top: 29vw;
+    left: 0.9vw;
+}
+.star-1 {
+    width: 1.302vw;
+    position: absolute;
+    transform: rotate(89deg);
+    left: 0.9vw;
+    top: 5.5vw;
+}
+.star-2 {
+    width: 1.302vw;
+    position: absolute;
+    transform: rotate(89deg);
+    left: 1.2vw;
+    top: 22.5vw;
+}
+.razvorot-grivastikus {
+    width: 37.448vw;
+    height: 37.5vw;
+    display: none;
 }
 
 /* -------------------------------footer----------------------------------------- */
