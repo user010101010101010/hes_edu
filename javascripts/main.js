@@ -195,40 +195,38 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // -------------------------------section 4---------------------------------
 
-        const draggable = document.querySelector('.grivastikus-book');
-        const dropzone = document.querySelector('.razvorot-container');
-        const image = dropzone.querySelector('.razvorot-grivastikus');
+    const book = document.querySelector('.grivastikus-book');
+    const container = document.querySelector('.razvorot-container');
+    const image = document.querySelector('.razvorot-grivastikus');
 
-        // Событие начала перетаскивания
-        draggable.addEventListener('dragstart', (e) => {
-            e.dataTransfer.setData('text/plain', 'drag'); // Устанавливаем данные для перетаскивания
-            draggable.classList.add('dragging'); // Добавляем класс для стилизации
-        });
+    book.addEventListener('dragstart', function(event) {
+        event.dataTransfer.setData('text/plain', 'book');
+        event.target.style.opacity = '1';
+    });
 
-        // Событие окончания перетаскивания
-        draggable.addEventListener('dragend', () => {
-            draggable.classList.remove('dragging'); // Убираем класс
-        });
+    container.addEventListener('dragover', function(event) {
+        // разрешение для браузера
+        event.preventDefault(); 
+        event.dataTransfer.dropEffect = 'move';
+    });
 
-        // Событие, когда объект находится над dropzone
-        dropzone.addEventListener('dragover', (e) => {
-            e.preventDefault(); // Разрешаем drop
-            dropzone.classList.add('dragover'); // Добавляем стиль для hover
-        });
+    book.addEventListener('dragend', function(event) {
+        if (event.dataTransfer.dropEffect === 'move') {
+            event.target.remove();
+        }
+    });
 
-        // Событие, когда объект покидает dropzone
-        dropzone.addEventListener('dragleave', () => {
-            dropzone.classList.remove('dragover'); // Убираем стиль hover
-        });
+    container.addEventListener('drop', function(event) {
+        event.preventDefault();
 
-        // Событие, когда объект отпущен в dropzone
-        dropzone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropzone.classList.remove('dragover'); // Убираем стиль hover
+        const data = event.dataTransfer.getData('text/plain');
 
-            // Показываем картинку в контейнере
+        // проверка, что это книга
+        if (data === 'book') {
             image.style.display = 'block';
-            draggable.style.display = 'none'; // Скрываем перетаскиваемый объект
-        });
+
+            event.dataTransfer.dropEffect = 'move';
+        }
+    });
 
  })

@@ -620,6 +620,7 @@ canvas {
     position: absolute;
     left: 56.25vw;
     top: 18.75vw;
+    display: flex;
 }
 .razvorot-container p {
     font-family: 'HelveticaNeue';
@@ -686,6 +687,7 @@ canvas {
     top: 6.25vw;
     display: flex;
     cursor: move;
+    user-select: none;
 }
 .grivastikus-book-h1 {
     font-family: 'Arial Black';
