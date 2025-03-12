@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // закругленные концы и соединения линий
     let isDrawing = false;
-    ctx.strokeStyle = 'black';
+    ctx.strokeStyle = '#FE5001';
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
 
@@ -195,38 +195,36 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // -------------------------------section 4---------------------------------
 
-    const book = document.querySelector('.grivastikus-book');
+    const books = document.querySelectorAll('.academy-book, .grivastikus-book, .kafedra-book, .ippo-book');
     const container = document.querySelector('.razvorot-container');
-    const image = document.querySelector('.razvorot-grivastikus');
+    const razvorots = document.querySelectorAll('.academy-razvorot, .grivastikus-razvorot, .kafedra-razvorot, .ippo-razvorot');
 
-    book.addEventListener('dragstart', function(event) {
-        event.dataTransfer.setData('text/plain', 'book');
-        event.target.style.opacity = '1';
+    books.forEach(book => {
+        book.addEventListener('dragstart', dragStart);
     });
 
-    container.addEventListener('dragover', function(event) {
-        // разрешение для браузера
-        event.preventDefault(); 
-        event.dataTransfer.dropEffect = 'move';
-    });
+    container.addEventListener('dragover', dragOver);
+    container.addEventListener('drop', drop);
 
-    book.addEventListener('dragend', function(event) {
-        if (event.dataTransfer.dropEffect === 'move') {
-            event.target.remove();
-        }
-    });
+    function dragStart(event) {
+        // Сохраняем класс книги, чтобы определить соответствующий разворот
+        event.dataTransfer.setData('text/plain', event.target.classList[0]);
+    }
 
-    container.addEventListener('drop', function(event) {
+    function dragOver(event) {
         event.preventDefault();
+    }
 
-        const data = event.dataTransfer.getData('text/plain');
+    function drop(event) {
+        event.preventDefault();
+        const bookClass = event.dataTransfer.getData('text/plain'); // Получаем класс книги
+        const razvorotClass = bookClass.replace('-book', '-razvorot'); // Меняем суффикс класса
+        const razvorot = document.querySelector(`.${razvorotClass}`); // Находим соответствующий разворот
 
-        // проверка, что это книга
-        if (data === 'book') {
-            image.style.display = 'block';
-
-            event.dataTransfer.dropEffect = 'move';
-        }
-    });
+        // Скрываем все развороты
+        razvorots.forEach(r => r.style.display = 'none');
+        // Показываем соответствующий разворот
+        razvorot.style.display = 'block';
+    }
 
  })

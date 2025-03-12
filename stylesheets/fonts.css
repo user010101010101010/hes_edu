@@ -41,8 +41,32 @@
     font-weight: 600;
 }
 @font-face {
+    font-family: 'IBM Plex Mono';
+    src: url(../fonts/IBMPlexMono-Bold.ttf) format('truetype');
+    font-style: bold;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url(../fonts/IBMPlexMono-Medium.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
     font-family: 'Source Serif Pro';
     src: url(../fonts/SourceSerifPro-SemiBold.ttf) format('truetype');
     font-style: normal;
     font-weight: 600;
+}
+@font-face {
+    font-family: 'Arial';
+    src: url(../fonts/arialmt.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Playfair Display Bold';
+    src: url(../fonts/PlayfairDisplay-Black.ttf) format('truetype');
+    font-style: bold;
+    font-weight: 900;
 }

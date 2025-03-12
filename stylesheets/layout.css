@@ -598,7 +598,7 @@ canvas {
 }
 .brush {
     border-radius: 100%;
-    background-color: #000000;
+    background-color: #FE5001;
     position: absolute;
     left: 78.15vw;
     top: 46.9vw;
@@ -615,19 +615,19 @@ canvas {
     top: 7.9vw;
 }
 .razvorot-container {
-    width: 37.448vw;
+    width: 31.198vw;
     height: 37.5vw;
     position: absolute;
-    left: 56.25vw;
+    left: 59.4vw;
     top: 18.75vw;
     display: flex;
 }
-.razvorot-container p {
+.container-p {
     font-family: 'HelveticaNeue';
     font-size: 2.083vw;
     font-weight: 400;
     position: absolute;
-    left: 9.4vw;
+    left: 6.3vw;
     top: 17.95vw;
     z-index: -1;
 }
@@ -678,6 +678,46 @@ canvas {
     left: 3.49vw;
     top: 39.583vw;
 }
+.academy-razvorot {
+    width: 31.198vw;
+    height: 37.5vw;
+    display: none;
+    background-color: #fff;
+    border: 0.781vw solid #0437ff;
+}
+.academy-razvorot-h1 {
+    font-family: 'Playfair Display Bold';
+    font-weight: 900;
+    font-size: 2.604vw;
+    position: absolute;
+    width: 17.5vw;
+    text-align: center;
+    top: 19.979vw;
+    left: 6.885vw;
+}
+.academy-authors {
+    font-family: 'Playfair Display Bold';
+    font-weight: 500;
+    font-size: 1.042vw;
+    position: absolute;
+    top: 2.604vw;
+    left: 5.7vw;
+}
+.academy-details {
+    font-family: 'Playfair Display Bold';
+    font-weight: 500;
+    font-size: 0.677vw;
+    position: absolute;
+    top: 34.167vw;
+    left: 11.9vw;
+}
+.academy-img {
+    width: 8.789vw;
+    height: 9.159vw;
+    left: 11.198vw;
+    top: 9.323vw;
+    position: absolute;
+}
 .grivastikus-book {
     background-color: #fff;
     width: 5.677vw;
@@ -721,6 +761,53 @@ canvas {
     left: 2.135vw;
     top: 48.073vw;
 }
+.grivastikus-razvorot {
+    width: 31.198vw;
+    height: 37.5vw;
+    display: none;
+    background-color: #fff;
+    border: 0.781vw solid #0437ff;
+}
+.grivastikus-razvorot-h1 {
+    font-size: 3.385vw;
+    font-family: 'Arial Black';
+    font-weight: 400;
+    position: absolute;
+    top: 1.7vw;
+    left: 1.5vw;
+}
+.grivastikus-authors {
+    font-size: 0.781vw;
+    font-family: 'Arial';
+    font-weight: 400;
+    position: absolute;
+    left: 1.6vw;
+    top: 6vw;
+}
+.grivastikus-details {
+    font-family: 'Arial';
+    font-weight: 400;
+    position: absolute;
+    font-size: 2.344vw;
+    width: 11vw;
+    top: 25vw;
+    left: 1.5vw;
+    line-height: 1.2;
+}
+.flyinghorses {
+    width: 9.482vw;
+    height: 10.315vw;
+    position: absolute;
+    left: 1.5vw;
+    top: 13vw;
+}
+.grivastikus-img {
+    position: absolute;
+    width: 17.969vw;
+    height: 27.396vw;
+    left: 12.5vw;
+    top: 8.5vw;
+}
 .kafedra-book {
     background-color: #fff;
     position: absolute;
@@ -760,6 +847,40 @@ canvas {
     position: absolute;
     left: 5.26vw;
     top: 23.073vw;
+}
+.kafedra-razvorot {
+    width: 31.198vw;
+    height: 37.5vw;
+    display: none;
+    background-color: #fff;
+    border: 0.781vw solid #0437ff;
+}
+.kafedra-razvorot-h1 {
+    font-size: 2.604vw;
+    position: absolute;
+    font-family: 'IBM Plex Mono';
+    font-weight: 700;
+    width: 24.792vw;
+    text-align: center;
+    letter-spacing: 0.1vw;
+    left: 3vw;
+    top: 3.5vw;
+}
+.kafedra-details {
+    position: absolute;
+    font-size: 1.302vw;
+    font-family: 'IBM Plex Mono';
+    font-weight: 500;
+    top: 11vw;
+    left: 9.3vw;
+    letter-spacing: 0.1vw;
+}
+.kafedra-img {
+    width: 26.667vw;
+    height: 15.365vw;
+    position: absolute;
+    top: 18vw;
+    left: 2vw;
 }
 .ippo-book {
     position: absolute;
@@ -808,11 +929,53 @@ canvas {
     left: 1.2vw;
     top: 22.5vw;
 }
-.razvorot-grivastikus {
-    width: 37.448vw;
+.ippo-razvorot {
+    width: 31.198vw;
     height: 37.5vw;
     display: none;
+    background-color: #fff;
+    border: 0.781vw solid #0437ff;
 }
+.ippo-razvorot-h1 {
+    font-size: 3.125vw;
+    font-family: 'Source Serif Pro';
+    font-weight: 600;
+    position: absolute;
+    left: 10.5vw;
+    top: 2vw;
+    letter-spacing: 0.1vw;
+}
+.ippo-razvorot-h2 {
+    font-size: 3.125vw;
+    font-family: 'Source Serif Pro';
+    font-weight: 600;
+    position: absolute;
+    top: 32.3vw;
+    left: 5.4vw;
+    letter-spacing: 0.12vw;
+}
+.ippo-img {
+    width: 26.771vw;
+    height: 26.771vw;
+    position: absolute;
+    left: 2vw;
+    top: 5vw;
+}
+.ippo-star-1 {
+    width: 1.302vw;
+    height: 1.302vw;
+    position: absolute;
+    left: 8.3vw;
+    top: 2.8vw;
+}
+.ippo-star-2 {
+    width: 1.302vw;
+    height: 1.302vw;
+    position: absolute;
+    top: 2.8vw;
+    left: 21vw;
+}
+
 
 /* -------------------------------footer----------------------------------------- */
 
