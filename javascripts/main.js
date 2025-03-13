@@ -198,17 +198,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const books = document.querySelectorAll('.academy-book, .grivastikus-book, .kafedra-book, .ippo-book');
     const container = document.querySelector('.razvorot-container');
     const razvorots = document.querySelectorAll('.academy-razvorot, .grivastikus-razvorot, .kafedra-razvorot, .ippo-razvorot');
+    const textInBox = document.querySelector('.container-p')
 
     books.forEach(book => {
         book.addEventListener('dragstart', dragStart);
+        book.addEventListener('dragend', dragEnd);
     });
 
     container.addEventListener('dragover', dragOver);
     container.addEventListener('drop', drop);
 
+    // Добавляем обработчик двойного клика для каждого разворота
+    razvorots.forEach(razvorot => {
+        razvorot.addEventListener('dblclick', () => {
+            razvorot.style.display = 'none'; // Скрываем разворот при двойном клике
+        });
+    });
+
     function dragStart(event) {
         // Сохраняем класс книги, чтобы определить соответствующий разворот
         event.dataTransfer.setData('text/plain', event.target.classList[0]);
+        textInBox.classList.add('dragstart')
+        // Добавляем обводку контейнеру при захвате книги
+        container.classList.add('drag-over');
+    }
+
+    function dragEnd() {
+        // Убираем обводку контейнера при отпускании книги
+        container.classList.remove('drag-over');
     }
 
     function dragOver(event) {
@@ -225,6 +242,9 @@ document.addEventListener('DOMContentLoaded', function() {
         razvorots.forEach(r => r.style.display = 'none');
         // Показываем соответствующий разворот
         razvorot.style.display = 'block';
+
+        // Убираем обводку контейнера после сброса книги
+        container.classList.remove('drag-over');
     }
 
  })

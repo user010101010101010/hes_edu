@@ -621,6 +621,12 @@ canvas {
     left: 59.4vw;
     top: 18.75vw;
     display: flex;
+    transition: border-color 0.3s ease;
+}
+.razvorot-container.drag-over {
+    border: 0.5vw dashed #FE5001;
+    width: 24.948vw;
+    left: 62.5vw;
 }
 .container-p {
     font-family: 'HelveticaNeue';
@@ -630,6 +636,9 @@ canvas {
     left: 6.3vw;
     top: 17.95vw;
     z-index: -1;
+}
+.container-p.dragstart {
+    display: none;
 }
 .empty-book {
     background-color: #fff;
