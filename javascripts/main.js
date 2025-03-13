@@ -1,7 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
+  interactiveMap()
+  canvasDraw()
+  bookSelection()
+})
     
     // -------------------------------section 2---------------------------------
     
+    function interactiveMap() {
+
     const korpusa = document.getElementById('korpusa');
     const korpusb = document.getElementById('korpusb');
     const korpusc = document.getElementById('korpusc');
@@ -29,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function hideAllExcept(exceptElement) {
         const elements = [rooma, roomb, roomc, roomd, roome, clickme];
-        // forEach используется для перебора массива элементов и скрытия всех элементов, кроме указанного
+
         elements.forEach(element => { 
             if (element !== exceptElement) {
                 element.style.opacity = '0';
@@ -116,8 +122,11 @@ document.addEventListener('DOMContentLoaded', function() {
             clickme.style.visibility = 'hidden';
         }
     });
+    }
 
     // -------------------------------section 3---------------------------------
+
+    function canvasDraw() {
 
     const canvas = document.getElementById('art');
     const clearButton = document.querySelector('.canvas-item-1');
@@ -192,10 +201,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         updateSizePreview();
     });
+    }
   
     // -------------------------------section 4---------------------------------
 
-    const books = document.querySelectorAll('.academy-book, .grivastikus-book, .kafedra-book, .ippo-book');
+    function bookSelection() {
+            const books = document.querySelectorAll('.academy-book, .grivastikus-book, .kafedra-book, .ippo-book');
     const container = document.querySelector('.razvorot-container');
     const razvorots = document.querySelectorAll('.academy-razvorot, .grivastikus-razvorot, .kafedra-razvorot, .ippo-razvorot');
     const textInBox = document.querySelector('.container-p')
@@ -208,23 +219,20 @@ document.addEventListener('DOMContentLoaded', function() {
     container.addEventListener('dragover', dragOver);
     container.addEventListener('drop', drop);
 
-    // Добавляем обработчик двойного клика для каждого разворота
     razvorots.forEach(razvorot => {
         razvorot.addEventListener('dblclick', () => {
-            razvorot.style.display = 'none'; // Скрываем разворот при двойном клике
+            razvorot.style.display = 'none'; 
         });
     });
 
     function dragStart(event) {
-        // Сохраняем класс книги, чтобы определить соответствующий разворот
         event.dataTransfer.setData('text/plain', event.target.classList[0]);
         textInBox.classList.add('dragstart')
-        // Добавляем обводку контейнеру при захвате книги
+
         container.classList.add('drag-over');
     }
 
     function dragEnd() {
-        // Убираем обводку контейнера при отпускании книги
         container.classList.remove('drag-over');
     }
 
@@ -234,17 +242,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function drop(event) {
         event.preventDefault();
-        const bookClass = event.dataTransfer.getData('text/plain'); // Получаем класс книги
-        const razvorotClass = bookClass.replace('-book', '-razvorot'); // Меняем суффикс класса
-        const razvorot = document.querySelector(`.${razvorotClass}`); // Находим соответствующий разворот
+        const bookClass = event.dataTransfer.getData('text/plain'); 
+        const razvorotClass = bookClass.replace('-book', '-razvorot'); 
+        const razvorot = document.querySelector(`.${razvorotClass}`); 
 
-        // Скрываем все развороты
         razvorots.forEach(r => r.style.display = 'none');
-        // Показываем соответствующий разворот
         razvorot.style.display = 'block';
 
-        // Убираем обводку контейнера после сброса книги
         container.classList.remove('drag-over');
     }
-
- })
+    }
