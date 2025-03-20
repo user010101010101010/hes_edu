@@ -1,0 +1,74 @@
+@media only screen and (max-width: 768px) {
+    .block1,
+    .block1mobile {
+        width: 16.6559vw;
+        height: 16.6559vw;
+    }
+    .block1.none {
+        display: none;
+    }
+    .block1mobile {
+        border: 0.13vw solid #0437ff;
+        display: block;
+    }
+    .section1 {
+        height: 166.559vw;
+    }
+    .section1 h1 {
+        display: block;
+        font-size: 19.531vw;
+        top: 22vw;
+        left: 5vw;
+        line-height: 22.5vw;
+    }
+    .forhorses {
+        font-size: 7.813vw;
+        top: 105vw;
+        left: 37vw;
+    }
+    .university {
+        font-size: 7.813vw;
+        left: 3.906vw;
+        top: 88.8vw;
+    }
+    .section2 {
+        height: 299.8062vw;
+    }
+    .section2 h2 {
+        font-size: 7.161vw;
+        width: 59.766vw;
+        top: 22.4vw;
+        left: 37vw;
+    }
+    .interactive-map {
+        display: block;
+        height: 233.203vw;
+        width: 100vw;
+        left: 0;
+        top: 50vw;
+    }
+    .room {
+        height: 116.536vw;
+        width: 100vw;
+    }
+    .map {
+        width: 94.531vw;
+        height: 111.328vw;
+    }
+    .room .clickme {
+        font-size: 5.859vw;
+        width: 67.188vw;
+        top: 203vw;
+        left: 13vw;
+        line-height: 7vw;
+    }
+    .section3 {
+        height: 149.9031vw;
+    }
+    .section4 {
+        height: 249.8385vw;
+    }
+    .footer {
+        height: 99.9354vw;
+    }
+}

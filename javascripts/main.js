@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   interactiveMap()
   canvasDraw()
   bookSelection()
+  addBRtoH1()
+  window.addEventListener('resize', addBRtoH1())
 })
     
     // -------------------------------section 2---------------------------------
@@ -252,3 +254,16 @@ document.addEventListener('DOMContentLoaded', () => {
         container.classList.remove('drag-over');
     }
     }
+    // -------------------------------adaptive---------------------------------
+    
+    function addBRtoH1() {
+  const h1 = document.querySelector('.foreground h1')
+
+  setInterval(() => {
+    if (window.innerWidth < 770) {
+      h1.innerHTML = 'HORSE.<br> EDU'
+    } else {
+      h1.innerHTML = 'HORSE.EDU'
+    }
+  }, 1000)
+}
