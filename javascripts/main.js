@@ -135,19 +135,16 @@ function canvasDraw() {
     const sizePreviewDiv = document.querySelector('.brush');
     const ctx = canvas.getContext('2d');
 
-    // линии были пиксельные, увеличил разрешение канваса
     const dpi = window.devicePixelRatio || 1;
     canvas.width = canvas.clientWidth * dpi;
     canvas.height = canvas.clientHeight * dpi;
     ctx.scale(dpi, dpi);
 
-    // закругленные концы и соединения линий
     let isDrawing = false;
     ctx.strokeStyle = '#FE5001';
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
 
-    // возможные размеры линии
     const lineWidths = [2, 5, 10];
     let currentLineWidthIndex = 0;
     ctx.lineWidth = lineWidths[currentLineWidthIndex];
@@ -158,10 +155,8 @@ function canvasDraw() {
         sizePreviewDiv.style.height = `${size}vw`;
     }
 
-    // инициализация размера div
     updateSizePreview();
 
-    // функция для получения правильных координат курсора/касания
     function getCanvasPosition(event) {
         const rect = canvas.getBoundingClientRect();
         const scaleX = canvas.width / rect.width;
@@ -183,13 +178,12 @@ function canvasDraw() {
         };
     }
 
-    // Обработчики для мыши
     function startDrawing(e) {
         isDrawing = true;
         const { x, y } = getCanvasPosition(e);
         ctx.beginPath();
         ctx.moveTo(x, y);
-        e.preventDefault(); // Предотвращаем обработку браузером
+        e.preventDefault();
     }
 
     function draw(e) {
@@ -197,7 +191,7 @@ function canvasDraw() {
             const { x, y } = getCanvasPosition(e);
             ctx.lineTo(x, y);
             ctx.stroke();
-            e.preventDefault(); // Предотвращаем обработку браузером
+            e.preventDefault();
         }
     }
 
@@ -206,16 +200,13 @@ function canvasDraw() {
         ctx.closePath();
     }
 
-    // Добавляем обработчики для мыши
     canvas.addEventListener('mousedown', startDrawing);
     canvas.addEventListener('mousemove', draw);
     canvas.addEventListener('mouseup', stopDrawing);
     canvas.addEventListener('mouseout', stopDrawing);
 
-    // Добавляем обработчики для касаний
     canvas.addEventListener('touchstart', (e) => {
         startDrawing(e);
-        // Предотвращаем прокрутку страницы при рисовании
         if (e.cancelable) {
             e.preventDefault();
         }
@@ -223,7 +214,6 @@ function canvasDraw() {
 
     canvas.addEventListener('touchmove', (e) => {
         draw(e);
-        // Предотвращаем прокрутку страницы при рисовании
         if (e.cancelable) {
             e.preventDefault();
         }
@@ -231,7 +221,6 @@ function canvasDraw() {
 
     canvas.addEventListener('touchend', stopDrawing);
 
-    // Обработчики кнопок
     clearButton.addEventListener('click', () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     });
@@ -242,7 +231,6 @@ function canvasDraw() {
         updateSizePreview();
     });
 
-    // Предотвращаем стандартное поведение касания на всем документе
     document.addEventListener('touchstart', (e) => {
         if (e.target === canvas) {
             e.preventDefault();
