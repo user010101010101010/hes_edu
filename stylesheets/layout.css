@@ -647,7 +647,7 @@ canvas {
     position: absolute;
     left: 7.4vw;
     top: 23.698vw;
-    transform: rotate(3deg);
+    rotate: 3deg;
 }
 .academy-book {
     background-color: #fff;
@@ -809,6 +809,7 @@ canvas {
     position: absolute;
     left: 1.5vw;
     top: 13vw;
+    display: none;
 }
 .grivastikus-img {
     position: absolute;
@@ -896,7 +897,7 @@ canvas {
     background-color: #fff;
     width: 3.447vw;
     height: 31.368vw;
-    transform: rotate(-18deg);
+    rotate: -18deg;
     left: 41.9vw;
     top: 25.1vw;
     cursor: move;

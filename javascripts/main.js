@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.lineWidth = lineWidths[currentLineWidthIndex];
 
     function updateSizePreview() {
-        const size = ctx.lineWidth * 0.4;
+        const size = ctx.lineWidth * 0.5;
         sizePreviewDiv.style.width = `${size}vw`;
         sizePreviewDiv.style.height = `${size}vw`;
     }
@@ -162,37 +162,76 @@ document.addEventListener('DOMContentLoaded', () => {
     // инициализация размера div
     updateSizePreview();
 
-    // функция для получения правильных координат курсора
-    function getCanvasMousePosition(event) {
+    function getCanvasPosition(event) {
         const rect = canvas.getBoundingClientRect();
         const scaleX = canvas.width / rect.width;
         const scaleY = canvas.height / rect.height;
+        
+        let clientX, clientY;
+        
+        if (event.type.includes('touch')) {
+            clientX = event.touches[0].clientX;
+            clientY = event.touches[0].clientY;
+        } else {
+            clientX = event.clientX;
+            clientY = event.clientY;
+        }
+        
         return {
-            x: (event.clientX - rect.left) * scaleX / dpi,
-            y: (event.clientY - rect.top) * scaleY / dpi
+            x: (clientX - rect.left) * scaleX / dpi,
+            y: (clientY - rect.top) * scaleY / dpi
         };
     }
 
-    canvas.addEventListener('mousedown', (e) => {
+    // Обработчики для мыши
+    function startDrawing(e) {
         isDrawing = true;
-        const { x, y } = getCanvasMousePosition(e);
+        const { x, y } = getCanvasPosition(e);
         ctx.beginPath();
         ctx.moveTo(x, y);
-    });
+        e.preventDefault(); // Предотвращаем обработку браузером
+    }
 
-    canvas.addEventListener('mousemove', (e) => {
+    function draw(e) {
         if (isDrawing) {
-            const { x, y } = getCanvasMousePosition(e);
+            const { x, y } = getCanvasPosition(e);
             ctx.lineTo(x, y);
             ctx.stroke();
+            e.preventDefault(); // Предотвращаем обработку браузером
         }
-    });
+    }
 
-    canvas.addEventListener('mouseup', () => {
+    function stopDrawing() {
         isDrawing = false;
         ctx.closePath();
-    });
+    }
 
+    // Добавляем обработчики для мыши
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+
+    // Добавляем обработчики для касаний
+    canvas.addEventListener('touchstart', (e) => {
+        startDrawing(e);
+        // Предотвращаем прокрутку страницы при рисовании
+        if (e.cancelable) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    canvas.addEventListener('touchmove', (e) => {
+        draw(e);
+        // Предотвращаем прокрутку страницы при рисовании
+        if (e.cancelable) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    canvas.addEventListener('touchend', stopDrawing);
+
+    // Обработчики кнопок
     clearButton.addEventListener('click', () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     });
@@ -200,9 +239,21 @@ document.addEventListener('DOMContentLoaded', () => {
     changeLineWidthButton.addEventListener('click', () => {
         currentLineWidthIndex = (currentLineWidthIndex + 1) % lineWidths.length;
         ctx.lineWidth = lineWidths[currentLineWidthIndex];
-
         updateSizePreview();
     });
+
+    // Предотвращаем стандартное поведение касания на всем документе
+    document.addEventListener('touchstart', (e) => {
+        if (e.target === canvas) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    document.addEventListener('touchmove', (e) => {
+        if (e.target === canvas) {
+            e.preventDefault();
+        }
+    }, { passive: false });
     }
   
     // -------------------------------section 4---------------------------------

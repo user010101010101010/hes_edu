@@ -12,7 +12,7 @@
         display: block;
     }
     .section1 {
-        height: 166.559vw;
+        height: 149.9031vw;
     }
     .section1 h1 {
         display: block;
@@ -42,31 +42,204 @@
     }
     .interactive-map {
         display: block;
-        height: 233.203vw;
-        width: 100vw;
-        left: 0;
-        top: 50vw;
+        height: 227.995vw;
+        width: 94.531vw;
+        left: 2.734vw;
+        top: 52.734vw;
     }
     .room {
-        height: 116.536vw;
-        width: 100vw;
+        height: 116.667vw;
+        width: 94.531vw;
+    }
+    .map-center {
+        transform: scale(2.3);
     }
     .map {
         width: 94.531vw;
         height: 111.328vw;
     }
+    .roomA {
+        transform: scale(2.5);
+    }
+    .roomB {
+        transform: scale(2.5);
+    }
+    .roomC {
+        transform: scale(2.5);
+    }
+    .roomD {
+        transform: scale(2.5);
+    }
+    .roomE {
+        transform: scale(2.5);
+    }
+    .show {
+        left: 31.7vw;
+        top: 152.7vw;
+    }
     .room .clickme {
         font-size: 5.859vw;
         width: 67.188vw;
-        top: 203vw;
+        top: 158vw;
         left: 13vw;
         line-height: 7vw;
     }
     .section3 {
         height: 149.9031vw;
     }
+    .section3 h2 {
+        font-size: 7.161vw;
+        top: 5.9vw;
+        left: 7.2vw;
+    }
+    canvas {
+        width: 100vw;
+        height: 83.203vw;
+        left: 0vw;
+        top: 33.34vw;
+        border: 0.911vw solid #4f73ff;
+    }
+    .canvas-item-1 {
+        top: 122.5vw;
+        font-size: 6.51vw;
+        left: 14vw;
+    }
+    .canvas-item-2 {
+        font-size: 6.51vw;
+        top: 122.5vw;
+        left: 56vw;
+        color: #FFFFFF;
+    }
+    .brush {
+        top: 125vw;
+        left: 92vw;
+    }
+    .arrow {
+        display: none;
+    }
     .section4 {
         height: 249.8385vw;
+    }
+    .section4 h2 {
+        font-size: 7.161vw;
+        width: 55.729vw;
+        left: 5.5vw;
+        top: 5.5vw;
+    }
+    .razvorot-container {
+        width: 100vw;
+        height: 116.536vw;
+        left: 0vw;
+        top: 133.3vw;
+    }
+    .container-p {
+        font-size: 7.161vw;
+        top: 55vw;
+        left: 17.708vw;
+    }
+    .empty-book {
+        transform: scale(1.75);
+        top: 71.8vw;
+        left: 13.9vw;
+    }
+    .academy-book {
+        transform: scale(1.75);
+        top: 59.2vw;
+        left: 22.8vw;
+    }
+    .grivastikus-book {
+        transform: scale(1.75);
+        left: 38vw;
+        top: 48vw;
+    }
+    .kafedra-book {
+        transform: scale(1.75);
+        left: 51.2vw;
+        top: 82.35vw;
+    }
+    .ippo-book {
+        transform: scale(1.75);
+        left: 74.7vw;
+        top: 73.7vw;
+    }
+    .razvorot-container.drag-over {
+        width: 100vw;
+        height: 116.536vw;
+        left: 0vw;
+        border: 0.7vw dashed #FE5001;
+    }
+    .academy-razvorot {
+        left: 34.2vw;
+        position: absolute;
+        top: 39.2vw;
+        transform: scale(2.7);
+    }
+    .academy-razvorot-h1 {
+        left: 6.4vw;
+    }
+    .academy-authors {
+        left: 5.3vw;
+    }
+    .academy-img {
+        left: 10.8vw;
+    }
+    .academy-details {
+        left: 11.5vw;
+    }
+    .grivastikus-razvorot {
+        left: 34.2vw;
+        position: absolute;
+        top: 39.2vw;
+        transform: scale(2.7);
+    }
+    .grivastikus-razvorot-h1 {
+        left: 0.8vw;
+        top: 1.2vw;
+    }
+    .grivastikus-authors {
+        left: 0.9vw;
+        top: 5.5vw;
+    }
+    .grivastikus-details {
+        top: 24.5vw;
+        left: 0.9vw;
+    }
+    .grivastikus-img {
+        left: 11.8vw;
+        top: 8vw;
+    }
+    .kafedra-razvorot {
+        left: 34.2vw;
+        position: absolute;
+        top: 39.2vw;
+        transform: scale(2.7);
+    }
+    .ippo-razvorot {
+        left: 34.2vw;
+        position: absolute;
+        top: 39.2vw;
+        transform: scale(2.7);
+        border: 0.781vw solid #0437ff;
+    }
+    .ippo-razvorot-h1 {
+        left: 9.8vw;
+        top: 1.5vw;
+    }
+    .ippo-razvorot-h2 {
+        top: 31.8vw;
+        left: 4.7vw;
+    }
+    .ippo-img {
+        left: 1.3vw;
+        top: 4.5vw;
+    }
+    .ippo-star-1 {
+        left: 7.6vw;
+        top: 2.3vw;
+    }
+    .ippo-star-2 {
+        top: 2.3vw;
+        left: 20.3vw;
     }
     .footer {
         height: 99.9354vw;
