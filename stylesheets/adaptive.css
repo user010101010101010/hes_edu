@@ -244,4 +244,33 @@
     .footer {
         height: 99.9354vw;
     }
+    .small-text {
+        font-size: 4.557vw;
+    }
+    .big-text {
+        font-size: 7.161vw;
+    }
+    .email {
+        left: 55vw;
+        top: 89.8vw;
+    }
+    .phone {
+        display: none;
+    }
+    .name {
+        left: 4vw;
+        top: 71.9vw;
+    }   
+    .year {
+        left: 4vw;
+        top: 56.6vw;
+    }
+    .fio {
+        left: 39vw;
+        top: 22vw;
+    }
+    .group {
+        left: 68vw;
+        top: 39.7vw;
+    }
 }
