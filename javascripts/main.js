@@ -128,7 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // -------------------------------section 3---------------------------------
 
-function canvasDraw() {
+    function canvasDraw() {
+        
     const canvas = document.getElementById('art');
     const clearButton = document.querySelector('.canvas-item-1');
     const changeLineWidthButton = document.querySelector('.canvas-item-2');
@@ -242,11 +243,11 @@ function canvasDraw() {
             e.preventDefault();
         }
     }, { passive: false });
-}
+    }
   
     // -------------------------------section 4---------------------------------
 
-function bookSelection() {
+    function bookSelection() {
     const books = document.querySelectorAll('.academy-book, .grivastikus-book, .kafedra-book, .ippo-book');
     const container = document.querySelector('.razvorot-container');
     const razvorots = document.querySelectorAll('.academy-razvorot, .grivastikus-razvorot, .kafedra-razvorot, .ippo-razvorot');
@@ -290,12 +291,11 @@ function bookSelection() {
         const razvorotClass = bookClass.replace('-book', '-razvorot'); 
         const razvorot = document.querySelector(`.${razvorotClass}`); 
 
-        // Уже не нужно скрывать здесь, так как скрыли в dragStart
         razvorot.style.display = 'block';
 
         container.classList.remove('drag-over');
     }
-}
+    }
     // -------------------------------adaptive---------------------------------
     
     function addBRtoH1() {
